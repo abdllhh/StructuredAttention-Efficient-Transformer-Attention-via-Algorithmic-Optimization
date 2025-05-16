@@ -30,18 +30,18 @@ This approach is computationally expensive primarily because steps 2 and 4 invol
 
 ### KD-Tree for approximate similarity search:
 
-Instead of comparing each query with all keys (O(n²)), use a KD-tree to find the most similar keys in O(log n) time
-This approximates the full attention but dramatically reduces computation for long sequences
-Only compute attention weights for the most relevant keys (top-k selection)
+- Instead of comparing each query with all keys (O(n²)), use a KD-tree to find the most similar keys in O(log n) time
+- This approximates the full attention but dramatically reduces computation for long sequences
+- Only compute attention weights for the most relevant keys (top-k selection)
 
 ### Segment Trees for efficient reduction operations:
 
-Use segment trees to optimize the max-finding in softmax computation
-Parallelize the normalization step across different segments
-Enable efficient prefix sum calculations for cumulative operations
+- Use segment trees to optimize the max-finding in softmax computation
+- Parallelize the normalization step across different segments
+- Enable efficient prefix sum calculations for cumulative operations
 
 ### Sparse attention patterns implementation:
 
-Traditional attention computes dense attention weights
-Your implementation will create sparse attention matrices
-Focus computational resources only on the most important connections
+- Traditional attention computes dense attention weights
+- This implementation tries to create sparse attention matrices
+- Focus computational resources only on the most important connections
