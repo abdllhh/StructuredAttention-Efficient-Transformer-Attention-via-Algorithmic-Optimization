@@ -43,4 +43,4 @@ This approach is computationally expensive primarily because steps 2 and 4 invol
 
 ## Results
 
-(attention_performance.png)
+![graphical results](attention_performance.png)
