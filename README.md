@@ -34,14 +34,13 @@ This approach is computationally expensive primarily because steps 2 and 4 invol
 - This approximates the full attention but dramatically reduces computation for long sequences
 - Only compute attention weights for the most relevant keys (top-k selection)
 
-### Segment Trees for efficient reduction operations:
-
-- Use segment trees to optimize the max-finding in softmax computation
-- Parallelize the normalization step across different segments
-- Enable efficient prefix sum calculations for cumulative operations
 
 ### Sparse attention patterns implementation:
 
 - Traditional attention computes dense attention weights
 - This implementation tries to create sparse attention matrices
 - Focus computational resources only on the most important connections
+
+## Results
+
+(attention_performance.png)
